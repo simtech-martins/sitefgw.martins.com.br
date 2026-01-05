@@ -1,146 +1,183 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Comunicado Oficial | Migração de Plataforma</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunicado Oficial | Migração de Plataforma</title>
 
-<style>
-    body {
-        margin: 0;
-        font-family: "Segoe UI", Roboto, Arial, sans-serif;
-        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-        color: #333;
-    }
-
-    .container {
-        max-width: 900px;
-        min-height: 100vh;
-        margin: 0 auto;
-        background: #ffffff;
-        border-radius: 0 0 10px 10px;
-        box-shadow: 0 15px 40px rgba(0,0,0,0.25);
-        overflow: hidden;
-    }
-
-    .header {
-        background: #0b3c5d;
-        color: #ffffff;
-        padding: 25px 40px;
-        text-align: center;
-    }
-
-    .header h1 {
-        margin: 0;
-        font-size: 24px;
-        letter-spacing: 0.5px;
-    }
-
-    .header p {
-        margin-top: 8px;
-        font-size: 14px;
-        opacity: 0.9;
-    }
-
-    .content {
-        padding: 40px;
-        line-height: 1.6;
-        font-size: 15px;
-    }
-
-    .highlight {
-        background: #f1f6fb;
-        border-left: 5px solid #0b3c5d;
-        padding: 20px;
-        margin: 25px 0;
-        border-radius: 4px;
-    }
-
-    .highlight a {
-        font-weight: bold;
-        color: #0b3c5d;
-        text-decoration: none;
-    }
-
-    .highlight a:hover {
-        text-decoration: underline;
-    }
-
-    h2 {
-        margin-top: 40px;
-        font-size: 18px;
-        color: #0b3c5d;
-    }
-
-    ol {
-        margin-top: 15px;
-        padding-left: 20px;
-    }
-
-    ol li {
-        margin-bottom: 15px;
-    }
-
-    .contador {
-        background: #fff8e1;
-        border: 1px solid #ffe082;
-        padding: 15px;
-        margin-top: 30px;
-        border-radius: 6px;
-        font-size: 14px;
-    }
-
-    .contador strong {
-        color: #b00000;
-    }
-
-    .botao {
-        display: inline-block;
-        margin-top: 20px;
-        padding: 12px 25px;
-        background: #0b3c5d;
-        color: #ffffff;
-        text-decoration: none;
-        border-radius: 4px;
-        font-weight: 600;
-        transition: background 0.2s;
-    }
-
-    .botao:hover {
-        background: #092f48;
-    }
-
-    .footer {
-        background: #f4f6f8;
-        padding: 25px 40px;
-        font-size: 13px;
-        color: #555;
-    }
-
-    .footer strong {
-        color: #000;
-    }
-</style>
-
-<script>
-let segundos = 60;
-
-function iniciarRedirecionamento() {
-    const contador = document.getElementById("contador");
-
-    const intervalo = setInterval(() => {
-        segundos--;
-        contador.textContent = segundos;
-
-        if (segundos <= 0) {
-            clearInterval(intervalo);
-            window.location.href = "https://sitefexpress1.softwareexpress.com.br/sitefweb";
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
         }
-    }, 1000);
-}
 
-window.onload = iniciarRedirecionamento;
-</script>
+        body {
+            font-family: "Segoe UI", Roboto, Arial, sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #333;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
 
+        .container {
+            max-width: 900px;
+            min-height: 100vh;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background: #0b3c5d;
+            color: #ffffff;
+            padding: 25px 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            letter-spacing: 0.5px;
+        }
+
+        .header p {
+            margin-top: 8px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+            line-height: 1.6;
+            font-size: 15px;
+            flex: 1;
+        }
+
+        .highlight {
+            background: #f1f6fb;
+            border-left: 5px solid #0b3c5d;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+
+        .highlight a {
+            font-weight: bold;
+            color: #0b3c5d;
+            text-decoration: none;
+            word-break: break-word;
+        }
+
+        .highlight a:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            margin-top: 40px;
+            font-size: 18px;
+            color: #0b3c5d;
+        }
+
+        ol {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        ol li {
+            margin-bottom: 15px;
+        }
+
+        .contador {
+            background: #fff8e1;
+            border: 1px solid #ffe082;
+            padding: 15px;
+            margin-top: 30px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .contador strong {
+            color: #b00000;
+        }
+
+        .botao {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #0b3c5d;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .botao:hover {
+            background: #092f48;
+        }
+
+        .botao:focus {
+            outline: 3px solid #ffd54f;
+            outline-offset: 3px;
+        }
+
+        .footer {
+            background: #f4f6f8;
+            padding: 25px 40px;
+            font-size: 13px;
+            color: #555;
+        }
+
+        .footer strong {
+            color: #000;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .container {
+                border-radius: 0;
+            }
+
+            .header,
+            .content,
+            .footer {
+                padding: 25px 20px;
+            }
+
+            .header h1 {
+                font-size: 20px;
+            }
+
+            .content {
+                font-size: 14px;
+            }
+        }
+    </style>
+
+    <script>
+        function iniciarRedirecionamento() {
+            const contador = document.getElementById("contador");
+            if (!contador) return;
+
+            let segundos = 60;
+
+            const intervalo = setInterval(() => {
+                segundos--;
+                contador.textContent = segundos;
+
+                if (segundos <= 0) {
+                    clearInterval(intervalo);
+                    window.location.href = "https://sitefexpress1.softwareexpress.com.br/sitefweb";
+                }
+            }, 1000);
+        }
+
+        document.addEventListener("DOMContentLoaded", iniciarRedirecionamento);
+    </script>
 </head>
 
 <body>
@@ -157,19 +194,20 @@ window.onload = iniciarRedirecionamento;
         <p><strong>Prezado(a) cliente,</strong></p>
 
         <p>
-        Informamos que o novo portal de acesso aos relatórios já se encontra disponível.
-        A partir deste momento, solicitamos que o acesso seja realizado exclusivamente pelo link abaixo:
+            Informamos que o novo portal de acesso aos relatórios já se encontra disponível.
+            A partir deste momento, solicitamos que o acesso seja realizado exclusivamente pelo link abaixo:
         </p>
 
         <div class="highlight">
-            👉 <a href="https://sitefexpress1.softwareexpress.com.br/sitefweb">
-            https://sitefexpress1.softwareexpress.com.br/sitefweb
+            👉 <a href="https://sitefexpress1.softwareexpress.com.br/sitefweb"
+                 target="_blank" rel="noopener noreferrer">
+                https://sitefexpress1.softwareexpress.com.br/sitefweb
             </a>
         </div>
 
         <p>
-        Reforçamos que o link antigo será descontinuado em breve.
-        Por gentileza, pedimos que esta informação seja compartilhada com toda a sua equipe.
+            Reforçamos que o link antigo será descontinuado em breve.
+            Por gentileza, pedimos que esta informação seja compartilhada com toda a sua equipe.
         </p>
 
         <h2>Orientações de Acesso</h2>
@@ -177,12 +215,12 @@ window.onload = iniciarRedirecionamento;
         <ol>
             <li>
                 Acesse o portal de recuperação de senha e informe o e-mail do usuário cadastrado:
-                <br>
-                    <div class="highlight">
-                👉 <a href="https://esqueciminhasenha.softwareexpress.com.br/migrador/esqueci_minha_senha">
-                https://esqueciminhasenha.softwareexpress.com.br/migrador/esqueci_minha_senha
-                </a>
-                    </div>
+                <div class="highlight">
+                    👉 <a href="https://esqueciminhasenha.softwareexpress.com.br/migrador/esqueci_minha_senha"
+                         target="_blank" rel="noopener noreferrer">
+                        https://esqueciminhasenha.softwareexpress.com.br/migrador/esqueci_minha_senha
+                    </a>
+                </div>
             </li>
 
             <li>
@@ -195,7 +233,9 @@ window.onload = iniciarRedirecionamento;
             <strong><span id="contador">60</span> segundos</strong>.
         </div>
 
-        <a class="botao" href="https://sitefexpress1.softwareexpress.com.br/sitefweb">
+        <a class="botao"
+           href="https://sitefexpress1.softwareexpress.com.br/sitefweb"
+           target="_blank" rel="noopener noreferrer">
             Acessar Nova Plataforma Agora
         </a>
 
