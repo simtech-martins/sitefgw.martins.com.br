@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Plataforma Descontinuada</title>
+
+<script>
+let segundos = 60;
+
+function iniciarRedirecionamento() {
+    const contador = document.getElementById("contador");
+
+    const intervalo = setInterval(() => {
+        segundos--;
+        contador.textContent = segundos;
+
+        if (segundos <= 0) {
+            clearInterval(intervalo);
+            window.location.href = "https://sitefexpress1.softwareexpress.com.br/sitefweb";
+        }
+    }, 1000);
+}
+
+window.onload = iniciarRedirecionamento;
+</script>
+
+</head>
+<body style="font-family: Arial; text-align: center; margin-top: 80px;">
+
+<h1>⚠️ Plataforma Descontinuada</h1>
+
+<p>
+Esta plataforma foi descontinuada.<br>
+Você será redirecionado automaticamente para o novo portal oficial em
+<strong><span id="contador">60</span> segundos</strong>.
+</p>
+
+<p>
+Caso não seja redirecionado, clique abaixo:
+<br><br>
+<a href="https://sitefexpress1.softwareexpress.com.br/sitefweb">Acessar Nova Plataforma</a>
+</p>
+
+</body>
+</html>
